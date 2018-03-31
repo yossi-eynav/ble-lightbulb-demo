@@ -21999,7 +21999,6 @@
 
 	        _this.BLEConnect = _this.BLEConnect.bind(_this);
 	        _this.onChangeHandler = _this.onChangeHandler.bind(_this);
-	        _this.startPoliceLights = _this.startPoliceLights.bind(_this);
 	        return _this;
 	    }
 

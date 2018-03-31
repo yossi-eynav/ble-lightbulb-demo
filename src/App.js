@@ -11,7 +11,6 @@ export default class App extends Component {
         super();
         this.BLEConnect = this.BLEConnect.bind(this);
         this.onChangeHandler = this.onChangeHandler.bind(this);
-        this.startPoliceLights = this.startPoliceLights.bind(this);
     }
 
     onChangeHandler(value) {
