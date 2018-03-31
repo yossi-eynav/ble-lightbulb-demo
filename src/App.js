@@ -46,22 +46,12 @@ export default class App extends Component {
             })
             .catch(e => console.error(e));
     }
-
-    startPoliceLights() {
-        document.getElementById('audio-siren').play();
-        setInterval( ()=> {
-            setTimeout(() => {this.setBulbColor(256, 0, 0, 100)},0);
-            setTimeout(() => {this.setBulbColor(0, 0, 256, 100)},100);
-        },200)
-    }
     
   render() {
 
     return( <div>
                 <RaisedButton label="Connect!" style={{marginTop:'30px',marginBottom:'10px',width: '100%'}} primary={true} onClick={this.BLEConnect}/>
                 <SketchPicker type="sketch" onChange={this.onChangeHandler} />
-                <audio loop id="audio-siren" src="static/siren.mp3" style={{display: "none"}}> </audio>
-                <RaisedButton label="Start Police Lights!" style={{marginTop:'10px',width: '100%'}} onClick={this.startPoliceLights} secondary={true}/>
             </div> );
   }
 }
